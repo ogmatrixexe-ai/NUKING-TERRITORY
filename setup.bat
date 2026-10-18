@@ -1,4 +1,4 @@
-title FUFA-NUKE v1.0
+title Nuking Territory v1.0
 
 pip install discord.py 
 pip install aiohttp
