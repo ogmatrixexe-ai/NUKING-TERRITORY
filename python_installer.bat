@@ -1,10 +1,10 @@
 @echo off
 setlocal enabledelayedexpansion
-title FUFA-Tools Setup
+title NT Tools Setup
 color 0c
 
 echo.
-echo  ^<^<^< FUFA-TOOLS SETUP ^>^>^>
+echo  ^<^<^< NT-TOOLS SETUP ^>^>^>
 echo  ================================
 echo.
 
