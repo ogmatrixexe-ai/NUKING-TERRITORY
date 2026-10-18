@@ -1,3 +1,3 @@
-title FUFA-NUKE v1.0
+title NUKING TERRITORY v1.0
 
 python main.py
