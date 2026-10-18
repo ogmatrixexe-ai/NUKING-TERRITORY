@@ -1,6 +1,6 @@
 # ══════════════════════════════════════════════════════
-#  FUFA-NUKE  v1.0.0  --  by FUFA
-#  discord.gg/xn4vNQNqjh  
+#  NT  v1.0.0  --  by Nuking Territory
+#  https://discord.gg/arvWqVgq7z 
 # ══════════════════════════════════════════════════════
 
 import os, sys, time, random, asyncio, json, re, webbrowser
@@ -20,12 +20,12 @@ NO_BAN_KICK_ID = []
 
 TELEGRAM_URL = "https://t.me/v0idtool"
 TELEGRAM_TAG = ""
-DISCORD_URL  = "https://discord.gg/xn4vNQNqjh"
-DISCORD_TAG  = "discord.gg/xn4vNQNqjh"
-sed -i '25c\PUB = f"FUFA-NUKE | {TELEGRAM_TAG} | {DISCORD_TAG}"' main.py
+DISCORD_URL  = "https://discord.gg/arvWqVgq7z"
+DISCORD_TAG  = "https://discord.gg/arvWqVgq7z"
+sed -i '25c\PUB = f"NT | {TELEGRAM_TAG} | {DISCORD_TAG}"' main.py
 PUB_SHORT = f"{TELEGRAM_TAG} {DISCORD_TAG} |"   
-RAID_NAME   = "fuxed-by-fufa"
-TOOL_NAME   = "FUFA-NUKE"
+RAID_NAME   = "fuxed-by-nt"
+TOOL_NAME   = "Nuking Territory"
 
 AUTO_RAID_CONFIG = {
     "channel_type"   : "text",
@@ -36,9 +36,9 @@ AUTO_RAID_CONFIG = {
 }
 
 EMBED_CONFIG = {
-    "title"      : "\U0001f480  __FUFA-NUKE__",
+    "title"      : "\U0001f480  __NT__",
     "description": 
-        "**Ton serveur vient d'\u00eatre raid par FUFA-NUKE.**\n\n"
+        "**Ton serveur vient d'\u00eatre raid par NT.**\n\n"
         "_ _\n"
         f"**> {TELEGRAM_TAG}**\n"
         f"**> {DISCORD_TAG}**\n"
@@ -46,7 +46,7 @@ EMBED_CONFIG = {
         "_ _\n"
         "||@everyone||"
     ),
-    "color"      : 0xFF0000,
+    "color"      : #404040,
     "message"    : f"||@everyone||  {PUB}",
     "image"      : "https://media.discordapp.net/attachments/1471977538648674478/1477637266791727155/c51ca65be8fa86b4b8f29a7d15dce335_1.webp",
     "footer"     : f"{TELEGRAM_TAG} · {DISCORD_TAG}  
@@ -54,13 +54,13 @@ EMBED_CONFIG = {
         {"name": "\U0001f4f1 __Telegram__", "value": f"**{TELEGRAM_TAG}**", "inline": True},
         {"name": "\U0001f517 __Discord__", "value": f"**{DISCORD_TAG}**", "inline": True},
         {"name": "\U0001f431 __Github__",  "value": "**github.com/v0id4real**",   "inline": True},
-        {"name": "\u26a1 __Tool__",        "value": "**FUFA-NUKE v1.0.0**",       "inline": True},
+        {"name": "\u26a1 __Tool__",        "value": "**NT v1.0.0**",       "inline": True},
     ],
 }
 
-WEBHOOK_CONFIG = {"default_name": "FUFA-NUKE"}
+WEBHOOK_CONFIG = {"default_name": "Nuking Territory"}
 SERVER_CONFIG  = {
-    "new_name"       : "RAIDED BY FUFA-NUKE",
+    "new_name"       : "RAIDED BY NT",
     "new_icon"       : "",
     "new_description": f"{TELEGRAM_TAG} · {DISCORD_TAG}",
 }
@@ -180,20 +180,21 @@ def _get_guild(sid: str):
 
 # ── banner ─────────────────────────────────────────────
 _ART = [
-    r"███████╗██╗   ██╗███████╗ █████╗ ",
-    r"██╔════╝██║   ██║██╔════╝██╔══██╗",
-    r"█████╗  ██║   ██║█████╗  ███████║",
-    r"██╔══╝  ██║   ██║██╔══╝  ██╔══██║",
-    r"██║     ╚██████╔╝██║     ██║  ██║",
-    r"╚═╝      ╚═════╝ ╚═╝     ╚═╝  ╚═╝",
+    r"███╗   ██╗██╗   ██╗██╗  ██╗██╗███╗   ██╗ ██████╗ ",
+    r"████╗  ██║██║   ██║██║ ██╔╝██║████╗  ██║██╔════╝ ",
+    r"██╔██╗ ██║██║   ██║█████╔╝ ██║██╔██╗ ██║██║  ███╗",
+    r"██║╚██╗██║██║   ██║██╔═██╗ ██║██║╚██╗██║██║   ██║",
+    r"██║ ╚████║╚██████╔╝██║  ██╗██║██║ ╚████║╚██████╔╝",
+    r"╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ",
 ]
+
 _ART2 = [
-    r"  ██╗    ██╗██╗   ██╗██╗  ██╗███████╗ ║               ",
-    r"  ████╗  ██║██║   ██║██║ ██╔╝██╔════╝ ║ by Antinuke & Rc     ",
-    r"  ██╔██╗ ██║██║   ██║█████╔╝ █████╗   ╠══════════════ ",
-    r"  ██║╚██╗██║██║   ██║██╔═██╗ ██╔══╝   ║ " + DISCORD_TAG + "  ",
-    r"  ██║ ╚████║╚██████╔╝██║  ██╗███████╗ ╠══════════════ ",
-    r"  ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝ ║               ",
+    r"████████╗███████╗██████╗ ██████╗ ██╗████████╗ ██████╗ ██████╗ ██╗   ██╗ ║               ",
+    r"╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██║╚══██╔══╝██╔═══██╗██╔══██╗╚██╗ ██╔╝ ║ by Rc         ",
+    r"   ██║   █████╗  ██████╔╝██████╔╝██║   ██║   ██║   ██║██████╔╝ ╚████╔╝  ╠══════════════ ",
+    r"   ██║   ██╔══╝  ██╔══██╗██╔══██╗██║   ██║   ██║   ██║██╔══██╗  ╚██╔╝   ║ " + DISCORD_TAG + "  ",
+    r"   ██║   ███████╗██║  ██║██║  ██║██║   ██║   ╚██████╔╝██║  ██║   ██║    ╠══════════════ ",
+    r"   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝   ╚═╝    ║               ",
 ]
 _SHADES = [R1, R1, R2, R2, R3, R3]
 
